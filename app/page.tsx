@@ -184,12 +184,12 @@ const CATEGORY_CONFIGS: Record<CategoryKey, CategoryDefinition> = {
     units: {
       c: {
         label: "Celsius",
-        symbol: "deg C",
+        symbol: "°C",
         description: "Metric engineering temperature scale",
       },
       f: {
         label: "Fahrenheit",
-        symbol: "deg F",
+        symbol: "°F",
         description: "Imperial temperature scale",
       },
       k: {
@@ -199,7 +199,7 @@ const CATEGORY_CONFIGS: Record<CategoryKey, CategoryDefinition> = {
       },
       r: {
         label: "Rankine",
-        symbol: "deg R",
+        symbol: "°R",
         description: "Absolute imperial temperature scale",
       },
     },
@@ -207,7 +207,7 @@ const CATEGORY_CONFIGS: Record<CategoryKey, CategoryDefinition> = {
       {
         label: "Absolute zero",
         value: "0 K",
-        note: "-273.15 deg C and -459.67 deg F",
+        note: "-273.15 °C and -459.67 °F",
       },
       {
         label: "Water freezing point",
@@ -222,7 +222,7 @@ const CATEGORY_CONFIGS: Record<CategoryKey, CategoryDefinition> = {
       {
         label: "Standard room temperature",
         value: "293.15 K",
-        note: "20 deg C reference",
+        note: "20 °C reference",
       },
     ],
   },
