@@ -4,9 +4,11 @@
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
   --background: #07111d;
-  --background-glow: #123355;
-  --surface: rgba(8, 18, 31, 0.84);
-  --surface-2: rgba(12, 24, 40, 0.92);
+  --background-glow: #153962;
+  --background-grid: rgba(152, 205, 255, 0.08);
+  --surface: rgba(7, 18, 31, 0.82);
+  --surface-2: rgba(11, 24, 40, 0.9);
+  --surface-3: rgba(16, 31, 49, 0.92);
   --foreground: #e8f0fb;
   --muted: #92a4bc;
   --border: rgba(157, 180, 208, 0.16);
@@ -17,8 +19,10 @@
 :root[data-theme="light"] {
   --background: #edf4fb;
   --background-glow: #d3e7fb;
+  --background-grid: rgba(11, 61, 102, 0.08);
   --surface: rgba(255, 255, 255, 0.9);
   --surface-2: rgba(243, 248, 252, 0.96);
+  --surface-3: rgba(236, 244, 250, 0.98);
   --foreground: #081220;
   --muted: #53657d;
   --border: rgba(18, 36, 58, 0.12);
@@ -44,7 +48,13 @@ html {
 body {
   min-height: 100vh;
   background:
+    linear-gradient(var(--background-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--background-grid) 1px, transparent 1px),
     radial-gradient(circle at top, var(--background-glow) 0%, var(--background) 42%, #02060b 100%);
+  background-size:
+    32px 32px,
+    32px 32px,
+    auto;
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
   transition:
@@ -57,6 +67,7 @@ input,
 select,
 summary {
   -webkit-tap-highlight-color: transparent;
+  font: inherit;
 }
 
 summary::-webkit-details-marker {
